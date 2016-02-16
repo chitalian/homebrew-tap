@@ -4,7 +4,7 @@ class Simbody < Formula
   url      "https://github.com/simbody/simbody/archive/Simbody-3.5.3.tar.gz"
   version  "3.5.3"
   sha256   "8005fbdb16c6475f98e13b8f1423b0e9951c193681c2b0d19ae5b711d7e24ec1"
-  head     "https://github.com/simbody/simbody.git"
+  head     "https://github.com/simbody/simbody.git", :branch => "master"
 
   option "with-Release"       , "Set build-type to Release."
   option "with-RelWithDebInfo", "Set build-type to RelWithDebInfo."
