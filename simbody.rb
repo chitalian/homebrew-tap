@@ -1,10 +1,9 @@
 class Simbody < Formula
   desc     "Download, compile and install Simbody."
   homepage "https://github.com/simbody/simbody"
-  url      "https://github.com/simbody/simbody/archive/Simbody-3.5.3.tar.gz"
-  version  "3.5.3"
-  sha256   "8005fbdb16c6475f98e13b8f1423b0e9951c193681c2b0d19ae5b711d7e24ec1"
-  head     "https://github.com/simbody/simbody.git", :branch => "master"
+  url      "https://github.com/simbody/simbody.git",
+           :revision => "b98b6813dd87163a92be779cf4dd684e2f124d13"
+  version  "3.6"
 
   option "with-Release"       , "Set build-type to Release."
   option "with-RelWithDebInfo", "Set build-type to RelWithDebInfo."
@@ -15,9 +14,9 @@ class Simbody < Formula
   def install
     Dir.mkdir "build"
     Dir.chdir "build"
-    build_type = "Release"
-    if build.with? "RelWithDebInfo"
-      build_type = "RelWithDebInfo"
+    build_type = "RelWithDebInfo"
+    if build.with? "Release"
+      build_type = "Release"
     end
     if build.with? "Debug"
       build_type = "Debug"

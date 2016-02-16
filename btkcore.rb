@@ -1,10 +1,9 @@
 class Btkcore < Formula
-  version  "0.3.01"
+  version  "0.3.1"
   desc     "Download, compiler and install BTKCore."
   homepage "https://github.com/klshrinidhi/BTKCore"
-  url      "https://github.com/klshrinidhi/BTKCore/archive/"\
-           "BTKCore-0.3.01.tar.gz"
-  sha256   "cadf08e126d23f45327d1faf958082788cc523068cdf9a583841c5229728c286"
+  url      "https://github.com/klshrinidhi/BTKCore.git",
+           :revision => "ae0d2a43de0fe6c9ef2acce34a87c944dd113829"
 
   option "with-Release"       , "Set build-type to Release."
   option "with-RelWithDebInfo", "Set build-type to RelWithDebInfo."
@@ -15,9 +14,9 @@ class Btkcore < Formula
   def install
     Dir.mkdir "build"
     Dir.chdir "build"
-    build_type = "Release"
-    if build.with? "RelWithDebInfo"
-      build_type = "RelWithDebInfo"
+    build_type = "RelWithDebInfo"
+    if build.with? "Release"
+      build_type = "Release"
     end
     if build.with? "Debug"
       build_type = "Debug"
