@@ -13,7 +13,6 @@ class OpensimCore < Formula
   depends_on "swig"
   depends_on :java
   depends_on "simbody"
-  depends_on "btkcore" => "--HEAD"
 
   def install
     Dir.mkdir "build"
