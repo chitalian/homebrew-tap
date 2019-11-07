@@ -1,4 +1,4 @@
-class OpensimCore < Formula
+class OpensimCoreChitalian < Formula
   desc     "Download, compile and install OpenSim."
   homepage "https://github.com/opensim-org/opensim-core"
   url      "https://github.com/opensim-org/opensim-core.git",
